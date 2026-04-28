@@ -1,0 +1,58 @@
+title: "LAM+"
+description: "Laboratorio de Analise Multiespectral e Inteligencia Artificial para Sedimentos"
+baseurl: ""
+url: ""
+locale: pt_BR
+
+collections:
+  pages:
+    output: true
+  people:
+    output: true
+  projects:
+    output: true
+  protocols:
+    output: true
+  publications:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: academic_profile
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project_profile
+  - scope:
+      path: ""
+      type: protocols
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - _reference
+  - docs_context
+  - README.md
+
