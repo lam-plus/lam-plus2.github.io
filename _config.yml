@@ -1,8 +1,8 @@
 title: "LAM+"
-description: "Laboratorio de Analise Multiespectral e Inteligencia Artificial para Sedimentos"
-baseurl: ""
-url: ""
-locale: pt_BR
+description: "Laboratório de Análise Multiespectral e Inteligência Artificial para Sedimentos"
+baseurl: "/lam-plus2.github.io"
+url: "https://lam-plus.github.io"
+locale: "pt_BR"
 
 collections:
   pages:
