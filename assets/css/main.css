@@ -2,8 +2,12 @@
   --lam-bg: #f3f6f2;
   --lam-paper: #ffffff;
   --lam-ink: #1b2a2f;
+  --lam-muted: #5e7075;
   --lam-accent: #0b5d4a;
+  --lam-accent-dark: #073a2f;
+  --lam-accent-soft: #d7f4e8;
   --lam-border: #d6e1db;
+  --lam-shadow: 0 18px 45px rgba(9, 48, 39, 0.12);
 }
 
 * {
@@ -14,17 +18,33 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
   font-family: "Segoe UI", Tahoma, sans-serif;
   color: var(--lam-ink);
   background: radial-gradient(circle at top right, #e2efe8, var(--lam-bg) 45%);
+}
+
+body {
+  line-height: 1.6;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 
 a {
   color: var(--lam-accent);
 }
 
+a:hover {
+  color: var(--lam-accent-dark);
+}
+
+/* Institutional bar */
+
 .institutional-bar {
-  background: #073a2f;
+  background: var(--lam-accent-dark);
   color: #f2f8f5;
   font-size: 0.85rem;
 }
@@ -35,13 +55,21 @@ a {
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 
 .institutional-bar a {
-  color: #d7f4e8;
+  color: var(--lam-accent-soft);
   text-decoration: none;
 }
+
+.institutional-bar span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Main navigation */
 
 .main-nav {
   background: rgba(255, 255, 255, 0.92);
@@ -55,31 +83,45 @@ a {
 .nav-inner {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .nav-brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
   font-weight: 700;
   color: var(--lam-ink);
   text-decoration: none;
 }
 
+.nav-logo-img {
+  display: block;
+  width: auto;
+  height: 52px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
 .nav-toggle {
   display: none;
   margin-left: auto;
+  padding: 0.35rem;
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .nav-toggle span {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: var(--lam-ink);
-  margin: 4px 0;
+  margin: 5px 0;
+  border-radius: 2px;
 }
 
 .nav-menu {
@@ -87,7 +129,9 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 1rem;
+  font-size: 0.96rem;
 }
 
 .nav-menu > li {
@@ -97,6 +141,11 @@ a {
 .nav-menu a {
   text-decoration: none;
   color: var(--lam-ink);
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: var(--lam-accent);
 }
 
 .submenu {
@@ -104,28 +153,59 @@ a {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 180px;
+  min-width: 190px;
   list-style: none;
   padding: 0.5rem;
   margin: 0;
   background: var(--lam-paper);
   border: 1px solid var(--lam-border);
+  border-radius: 10px;
+  box-shadow: var(--lam-shadow);
 }
 
-.has-submenu:hover .submenu {
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+}
+
+.submenu a:hover {
+  background: #eef7f3;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
   display: block;
 }
 
 .nav-lang {
   margin-left: auto;
   display: flex;
+  align-items: center;
   gap: 0.4rem;
+  white-space: nowrap;
+  font-size: 0.92rem;
 }
+
+.nav-lang a {
+  text-decoration: none;
+}
+
+.nav-lang strong {
+  color: var(--lam-accent-dark);
+}
+
+/* Hero background */
 
 .hero-shell {
   position: fixed;
   inset: 0;
   z-index: -2;
+  overflow: hidden;
 }
 
 .bg-video {
@@ -137,8 +217,12 @@ a {
 .bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(4, 36, 29, 0.42), rgba(7, 52, 42, 0.25));
+  background:
+    linear-gradient(160deg, rgba(4, 36, 29, 0.52), rgba(7, 52, 42, 0.28)),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 42%);
 }
+
+/* Main content */
 
 .content {
   max-width: 1160px;
@@ -147,15 +231,161 @@ a {
 }
 
 .page-shell {
-  background: var(--lam-paper);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--lam-border);
   border-radius: 16px;
   padding: 2rem;
+  box-shadow: var(--lam-shadow);
 }
+
+.page-shell h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--lam-accent-dark);
+}
+
+.page-shell h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.45rem;
+  color: var(--lam-accent-dark);
+}
+
+.page-shell p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.page-shell ul,
+.page-shell ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.4rem;
+}
+
+.page-shell li {
+  margin-bottom: 0.35rem;
+}
+
+/* Optional card/grid utilities */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: var(--lam-paper);
+  border: 1px solid var(--lam-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(9, 48, 39, 0.08);
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+/* Academic/profile layout support */
+
+.academic-profile,
+.project-profile {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--lam-border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--lam-shadow);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 4px solid #eef7f3;
+}
+
+.profile-name,
+.project-title {
+  margin: 0;
+  color: var(--lam-accent-dark);
+}
+
+.profile-role,
+.profile-affiliation,
+.profile-location {
+  margin: 0.25rem 0;
+  color: var(--lam-muted);
+}
+
+.profile-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.profile-links a {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--lam-border);
+  border-radius: 999px;
+  text-decoration: none;
+  background: #f7faf8;
+}
+
+/* Project layout support */
+
+.project-hero {
+  min-height: 300px;
+  margin: -2rem -2rem 2rem;
+  border-radius: 16px 16px 0 0;
+  background-image: linear-gradient(
+      rgba(4, 36, 29, var(--project-overlay, 0.35)),
+      rgba(4, 36, 29, var(--project-overlay, 0.35))
+    ),
+    var(--project-bg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-hero-overlay {
+  padding: 2rem;
+}
+
+.project-hero .project-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.project-meta {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--lam-border);
+  color: var(--lam-muted);
+}
+
+/* Footer */
 
 .site-footer {
   border-top: 1px solid var(--lam-border);
-  background: #f7faf8;
+  background: rgba(247, 250, 248, 0.96);
 }
 
 .site-footer-inner {
@@ -165,7 +395,22 @@ a {
   font-size: 0.9rem;
 }
 
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Responsive */
+
 @media (max-width: 960px) {
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-logo-img {
+    height: 42px;
+    max-width: 150px;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -174,24 +419,80 @@ a {
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
     margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--lam-border);
   }
 
   .nav-menu.open {
     display: flex;
   }
 
-  .submenu {
-    position: static;
-    border: 0;
-    padding-left: 1rem;
+  .nav-menu > li {
+    width: 100%;
   }
 
-  .has-submenu:hover .submenu {
+  .nav-menu a {
     display: block;
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+
+  .submenu {
+    display: block;
+    position: static;
+    min-width: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0.25rem 0 0.25rem 1rem;
+    background: transparent;
+  }
+
+  .nav-lang {
+    margin-left: 0;
+  }
+
+  .page-shell,
+  .academic-profile,
+  .project-profile {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-hero {
+    margin: -1.25rem -1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .institutional-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .content {
+    margin: 1rem auto;
   }
 
   .nav-inner {
-    flex-wrap: wrap;
+    padding: 0.65rem 1rem;
+  }
+
+  .nav-logo-img {
+    height: 36px;
+    max-width: 130px;
   }
 }
