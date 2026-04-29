@@ -134,13 +134,46 @@ _pages/en/contact/index.md
 /en/contact/
 ```
 
+## Repositório e deploy
+
+Repositório de desenvolvimento:
+
+```text
+https://github.com/lam-plus/lam-plus2.github.io
+```
+
+URL de teste no GitHub Pages:
+
+```text
+https://lam-plus.github.io/lam-plus2.github.io/
+```
+
+Configurações obrigatórias em `_config.yml`:
+
+```yaml
+url: "https://lam-plus.github.io"
+baseurl: "/lam-plus2.github.io"
+```
+
+Não usar `baseurl: ""` em produção; essa configuração quebra todos os caminhos de assets e links.
+
+## Assets principais
+
+| Finalidade | Caminho |
+|---|---|
+| Logo principal | `assets/img/logo/lamplus-logo.png` |
+| Vídeo hero | `assets/video/lamplus-hero.mp4` |
+| Poster / fallback do hero | `assets/img/hero/hero-poster.jpg` |
+
+Não usar nomes legados como `o2-bg.mp4`, `o2-bg.png`, `o2-logo-transp.png` ou `hero-poster.png`.
+
 ## Página inicial
 
-A raiz `/` pode ser usada como página inicial em português ou como página de redirecionamento inteligente.
+A raiz `/` redireciona automaticamente para `/pt/` ou `/en/` com base no idioma do navegador.
 
-A lógica de idioma pode ser baseada em `navigator.language`, mas deve permitir escolha manual pelo usuário.
+A lógica de idioma usa `navigator.language`, mas permite escolha manual pelo usuário.
 
-Se houver redirecionamento automático, usar chave própria do LAM+ em `localStorage`, por exemplo:
+Chave de idioma em `localStorage`:
 
 ```javascript
 lamplus-lang
@@ -151,6 +184,31 @@ Não usar chaves antigas como:
 ```javascript
 o2-lang
 ```
+
+### Estrutura da home
+
+A página `/pt/` e `/en/` deve ter:
+
+1. Hero com vídeo de fundo e texto sobreposto, usando a classe `hero-content`.
+2. Conteúdo abaixo do hero usando `.page-shell` e cards das seções principais.
+
+Estrutura HTML mínima do hero:
+
+```html
+<section class="hero-section">
+  <!-- vídeo montado via _includes/video-background.html -->
+  <div class="hero-content">
+    <h1>LAM+</h1>
+    <p><!-- tagline --></p>
+  </div>
+</section>
+
+<section class="page-shell">
+  <!-- cards das seções -->
+</section>
+```
+
+Não usar `.hero-poster.png` como poster, salvo se explicitamente solicitado.
 
 ## Coleção `_people`
 
@@ -504,26 +562,36 @@ Substituições importantes:
 
 ```text
 Observatório Oceanográfico → LAM+
-o2-lang → lamplus-lang
-o2-logo-transp.png → logo do LAM+
-o2-bg.mp4 → vídeo/imagem do LAM+
-o2-bg.png → imagem/poster do LAM+
-Portfólio → Submissão de Amostras + Protocolos
-Recursos → Projetos
-Sobre → Laboratório
+o2-lang            → lamplus-lang
+o2-logo-transp.png → assets/img/logo/lamplus-logo.png
+o2-bg.mp4          → assets/video/lamplus-hero.mp4
+o2-bg.png          → assets/img/hero/hero-poster.jpg
+hero-poster.png    → NÃO USAR (usar hero-poster.jpg)
+Portfólio          → Submissão de Amostras + Protocolos
+Recursos           → Projetos
+Sobre              → Laboratório
+```
+
+## Configuração Jekyll recomendada
+
+O `_config.yml` deve usar:
+
+```yaml
+url: "https://lam-plus.github.io"
+baseurl: "/lam-plus2.github.io"
 ```
 
 ## Primeiro ciclo de implementação
 
 Ordem recomendada:
 
-1. Criar `_config.yml`.
+1. Configurar `_config.yml` com `url` e `baseurl` corretos.
 2. Criar `_includes/head.html`.
 3. Criar `_includes/navigation.html`.
 4. Criar `_includes/footer.html`.
 5. Criar `_layouts/default.html`.
 6. Criar `_layouts/page.html`.
-7. Criar página inicial.
+7. Criar página inicial com hero + cards.
 8. Criar páginas principais em português.
 9. Criar páginas principais em inglês.
 10. Criar coleção `_people`.
@@ -531,4 +599,4 @@ Ordem recomendada:
 12. Criar coleção `_protocols`.
 13. Criar coleção `_publications`.
 14. Ajustar CSS.
-15. Testar no GitHub Pages.
+15. Testar na URL: https://lam-plus.github.io/lam-plus2.github.io/

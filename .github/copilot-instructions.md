@@ -34,6 +34,31 @@ O site deve usar:
 
 Evitar frameworks pesados, dependências complexas ou soluções que dificultem a manutenção por estudantes e equipe técnica.
 
+## Repositório e deploy
+
+- Repositório de desenvolvimento: `lam-plus/lam-plus2.github.io`
+- URL de teste no GitHub Pages: `https://lam-plus.github.io/lam-plus2.github.io/`
+- O `_config.yml` deve usar:
+
+```yaml
+url: "https://lam-plus.github.io"
+baseurl: "/lam-plus2.github.io"
+```
+
+Não usar `baseurl: ""` em produção.
+
+## Assets principais
+
+| Elemento | Caminho |
+|---|---|
+| Logo principal | `assets/img/logo/lamplus-logo.png` |
+| Vídeo hero | `assets/video/lamplus-hero.mp4` |
+| Poster / fallback do hero | `assets/img/hero/hero-poster.jpg` |
+
+Não usar nomes legados: `o2-bg.mp4`, `o2-bg.png`, `o2-logo-transp.png`, `hero-poster.png`.
+
+Não usar `o2-lang`. A chave de idioma em `localStorage` é `lamplus-lang`.
+
 ## Relação com o site do Observatório
 
 O site do LAM+ deve se inspirar na estrutura geral do site do Observatório Oceanográfico, especialmente em:
@@ -505,11 +530,25 @@ Usar como inspiração:
 - cabeçalho limpo;
 - menu principal;
 - seletor PT/EN;
-- hero section na página inicial;
-- cards para seções principais;
+- hero section na página inicial com vídeo de fundo e texto sobreposto;
+- cards para seções principais abaixo do hero;
 - páginas internas claras;
 - rodapé institucional;
 - responsividade para celular.
+
+### Hero da página inicial
+
+O hero deve ter:
+
+- Vídeo de fundo via `_includes/video-background.html` (arquivo: `assets/video/lamplus-hero.mp4`).
+- Poster/fallback: `assets/img/hero/hero-poster.jpg`.
+- Texto sobreposto ao vídeo dentro da classe `.hero-content`.
+
+Não usar `hero-poster.png`, salvo se explicitamente solicitado.
+
+### Conteúdo abaixo do hero
+
+Usar `.page-shell` como contêiner de conteúdo principal e cards para as seções principais do site.
 
 A estrutura atual do site usa includes como:
 
@@ -545,6 +584,25 @@ Laboratório de Análise Multiespectral e Inteligência Artificial para Sediment
 ```
 
 conforme o contexto.
+
+Nomes legados que não devem aparecer no código:
+
+```text
+o2-lang          → lamplus-lang
+o2-logo-transp.png → assets/img/logo/lamplus-logo.png
+o2-bg.mp4        → assets/video/lamplus-hero.mp4
+o2-bg.png        → assets/img/hero/hero-poster.jpg
+hero-poster.png  → NÃO USAR (usar hero-poster.jpg)
+```
+
+## Regra de conteúdo institucional
+
+Não alterar conteúdo institucional (missão, visão, descrição do laboratório, nomes de seções, textos de cards) sem consultar:
+
+```text
+docs_context/content_pt.md
+docs_context/content_en.md
+```
 
 ## Arquivos de contexto
 
