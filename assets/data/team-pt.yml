@@ -107,10 +107,10 @@ people:
   - Imageamento
   photo: /assets/img/team/andre-belem.png
   links:
-    lattes: ''
-    orcid: ''
+    lattes: 'http://lattes.cnpq.br/8174173696509765'
+    orcid: 'https://orcid.org/0000-0002-8865-6180'
     github: https://github.com/andrebelem
-    linkedin: ''
+    linkedin: 'https://www.linkedin.com/in/andre-belem/'
   active: true
   notes: Entrada adicionada manualmente porque André não aparece na planilha exportada.
 - id: leandro-candeia
