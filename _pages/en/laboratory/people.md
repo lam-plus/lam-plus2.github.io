@@ -21,8 +21,26 @@ alt_lang: /pt/laboratorio/pessoas/
 <script>
 (function () {
 	var teamRoot = document.getElementById("team-groups");
+	var siteBaseUrl = "{{ site.baseurl }}";
 	if (!teamRoot) {
 		return;
+	}
+
+	function resolveAssetUrl(path) {
+		if (!path || typeof path !== "string") {
+			return "";
+		}
+		var trimmed = path.trim();
+		if (!trimmed) {
+			return "";
+		}
+		if (/^(https?:)?\/\//i.test(trimmed) || /^(data|blob):/i.test(trimmed)) {
+			return trimmed;
+		}
+		if (trimmed.charAt(0) === "/") {
+			return (siteBaseUrl || "") + trimmed;
+		}
+		return (siteBaseUrl || "") + "/" + trimmed;
 	}
 
 	function toNumber(value, fallback) {
@@ -70,7 +88,7 @@ alt_lang: /pt/laboratorio/pessoas/
 
 		if (person.photo && String(person.photo).trim()) {
 			var img = document.createElement("img");
-			img.src = String(person.photo).trim();
+			img.src = resolveAssetUrl(String(person.photo));
 			img.alt = person.name ? "Photo of " + person.name : "Team member photo";
 			img.loading = "lazy";
 			img.decoding = "async";
