@@ -50,7 +50,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="LAM+ VNIR/SWIR hyperspectral imaging system" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_HSI.png" alt="LAM+ VNIR/SWIR hyperspectral imaging system" />
 			</div>
 		</div>
 
@@ -63,7 +63,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="LAM+ Avaatech XRF Core Scanner" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_XRF.png" alt="LAM+ Avaatech XRF Core Scanner" />
 			</div>
 		</div>
 
@@ -76,7 +76,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="Visual documentation and technical photography of sedimentary samples at LAM+" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_Photo.png" alt="Visual documentation and technical photography of sedimentary samples at LAM+" />
 			</div>
 		</div>
 
@@ -89,7 +89,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="Scanning electron microscopy with EDS associated with LAM+" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_MEV.png" alt="Scanning electron microscopy with EDS associated with LAM+" />
 			</div>
 		</div>
 
@@ -102,7 +102,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="Physical properties profiling system for sedimentary cores" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_MSCL.png" alt="Physical properties profiling system for sedimentary cores" />
 			</div>
 		</div>
 
@@ -115,7 +115,7 @@ alt_lang: /pt/laboratorio/
 			</div>
 
 			<div class="equipment-image">
-				<img src="{{ site.baseurl }}/assets/img/equipamentos/generic_equip.png" alt="Support equipment and complementary analyses at LAM+" />
+				<img src="{{ site.baseurl }}/assets/img/equipamentos/equip_Curadoria.png" alt="Support equipment and complementary analyses at LAM+" />
 			</div>
 		</div>
 	</section>
