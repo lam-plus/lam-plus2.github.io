@@ -145,7 +145,7 @@ alt_lang: /en/laboratory/
 			<div>Contaminação ambiental</div>
 			<div>Correlação estratigráfica</div>
 			<div>Eventos extremos registrados em sedimentos</div>
-			<div>Engenharia de materiais e aplicações industriais</div>
+
 		</div>
 	</section>
 

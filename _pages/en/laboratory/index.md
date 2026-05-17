@@ -145,7 +145,7 @@ alt_lang: /pt/laboratorio/
 			<div>Environmental contamination</div>
 			<div>Stratigraphic correlation</div>
 			<div>Extreme events recorded in sediments</div>
-			<div>Materials engineering and industrial applications</div>
+
 		</div>
 	</section>
 
