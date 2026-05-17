@@ -4,6 +4,7 @@ lang: pt
 title: Laboratório
 permalink: /pt/laboratorio/
 alt_lang: /en/laboratory/
+published: false
 ---
 
 <section class="page-shell">
