@@ -653,6 +653,135 @@ a:hover {
   border: 1px solid currentColor;
 }
 
+/* Team page */
+
+.team-page-header {
+  margin-bottom: 1.5rem;
+}
+
+.team-page-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.team-intro {
+  max-width: 78ch;
+  margin: 0;
+}
+
+.team-groups {
+  display: grid;
+  gap: 2rem;
+}
+
+.team-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-group-title {
+  margin: 0;
+}
+
+.team-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f7faf8;
+  border: 1px solid var(--lam-border);
+}
+
+.team-card-media {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #edf2ef, #d5dfd9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c4a41;
+  letter-spacing: 0.04em;
+}
+
+.team-card-body {
+  min-width: 0;
+}
+
+.team-card-name {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.team-card-role,
+.team-card-affiliation,
+.team-card-description {
+  margin: 0.45rem 0 0;
+}
+
+.team-card-role {
+  font-weight: 700;
+}
+
+.team-card-affiliation {
+  color: var(--lam-muted);
+}
+
+.team-links {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.team-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--lam-border);
+  background: #ffffff;
+  color: var(--lam-accent-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.team-link:hover {
+  background: #eef6f2;
+}
+
+.team-loading,
+.team-empty {
+  margin: 0;
+  color: var(--lam-muted);
+}
+
 /* Footer */
 
 .site-footer {
@@ -755,6 +884,16 @@ a:hover {
 
   .contact-page .contact-image {
     max-width: 320px;
+  }
+
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card-media {
+    width: min(100%, 210px);
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
