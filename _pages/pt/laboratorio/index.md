@@ -9,7 +9,7 @@ alt_lang: /en/laboratory/
 <section class="page-shell lab-page">
 	<header class="lab-hero">
 		<div class="lab-hero-text">
-			<h1>Laboratório</h1>
+			<h1>LaboratórioOOOOO</h1>
 			<p class="lead">O LAM+ — Laboratório de Análise Multiespectral e Inteligência Artificial para Sedimentos — é uma infraestrutura científica multiusuária dedicada à análise integrada de sequências sedimentares em alta e ultra-alta resolução.</p>
 			<p>O laboratório reúne tecnologias de imageamento, escaneamento, caracterização composicional e processamento computacional para produzir dados não destrutivos, reprodutíveis e integrados, apoiando interpretações sedimentológicas, paleoambientais, climáticas, geoquímicas e ambientais.</p>
 		</div>
