@@ -9,18 +9,11 @@ alt_lang: /en/laboratory/
 <section class="page-shell lab-page">
 	<header class="lab-hero">
 		<div class="lab-hero-text">
-			<h1>LaboratórioOOOOO</h1>
-			<p class="lead">O LAM+ — Laboratório de Análise Multiespectral e Inteligência Artificial para Sedimentos — é uma infraestrutura científica multiusuária dedicada à análise integrada de sequências sedimentares em alta e ultra-alta resolução.</p>
-			<p>O laboratório reúne tecnologias de imageamento, escaneamento, caracterização composicional e processamento computacional para produzir dados não destrutivos, reprodutíveis e integrados, apoiando interpretações sedimentológicas, paleoambientais, climáticas, geoquímicas e ambientais.</p>
+			<h1>Laboratório</h1>
+			<p class="lead">O LAM+ — Laboratório de Análise Multiespectral e Inteligência Artificial para Sedimentos — é uma plataforma científica multiusuária dedicada à análise integrada de sequências sedimentares em alta resolução, combinando técnicas não destrutivas e dados espectrais, geoquímicos e físicos com ferramentas de inteligência artificial.</p>
+			<p>O laboratório opera como infraestrutura compartilhada voltada à inovação em geociências, formação de recursos humanos e colaboração interinstitucional, produzindo dados reprodutíveis e integrados para interpretações sedimentológicas, paleoambientais, climáticas e ambientais.</p>
 		</div>
 	</header>
-
-	<section class="lab-section">
-		<h2>O que é o LAM+</h2>
-		<p>O LAM+ foi concebido para integrar diferentes linhas de evidência — imagens, espectros, elementos químicos, propriedades físicas, dados laboratoriais e modelos computacionais — em fluxos analíticos aplicados ao estudo de testemunhos, seções sedimentares e amostras discretas.</p>
-
-		<p>A proposta do laboratório é combinar tecnologias óticas, espectrais, geoquímicas e computacionais para ampliar a capacidade de identificação de feições deposicionais, estruturas internas, variações composicionais, ciclos sedimentares e padrões não evidentes em descrições convencionais.</p>
-	</section>
 
 	<section class="lab-section lab-highlights">
 		<div class="lab-highlight-card">
@@ -42,14 +35,6 @@ alt_lang: /en/laboratory/
 			<h3>Inteligência artificial</h3>
 			<p>Uso de aprendizado de máquina e ciência de dados para reconhecimento de padrões, integração e interpretação.</p>
 		</div>
-	</section>
-
-	<section class="lab-section">
-		<h2>Missão e escopo</h2>
-		<p>Integrar tecnologias de escaneamento, imageamento, análise composicional e inteligência artificial para produzir dados de alta resolução sobre sequências sedimentares, promovendo inovação metodológica, formação de recursos humanos e colaboração científica.</p>
-
-		<h2>Visão</h2>
-		<p>Consolidar o LAM+ como uma infraestrutura de referência em análise multiespectral e inteligência artificial aplicada a sedimentos, contribuindo para o avanço das geociências, da paleoclimatologia e da investigação de mudanças ambientais.</p>
 	</section>
 
 	<section class="lab-section">
