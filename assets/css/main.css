@@ -495,6 +495,150 @@ a:hover {
   line-height: 1.7;
 }
 
+/* Laboratory page */
+
+.lab-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lab-hero {
+  margin-bottom: 2.5rem;
+}
+
+.lab-hero-text {
+  max-width: 950px;
+}
+
+.lab-hero .lead {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  margin-top: 1rem;
+}
+
+.lab-section {
+  margin: 3rem 0;
+}
+
+.lab-section h2 {
+  margin-bottom: 1rem;
+}
+
+.lab-section p {
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+}
+
+.lab-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.lab-highlight-card {
+  padding: 1.2rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lab-highlight-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.lab-highlight-card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.equipment-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.equipment-feature-reverse {
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+}
+
+.equipment-feature-reverse .equipment-text {
+  order: 2;
+}
+
+.equipment-feature-reverse .equipment-image {
+  order: 1;
+}
+
+.equipment-text h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.equipment-status {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.equipment-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.workflow-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.workflow-list span {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.95rem;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.applications-grid div {
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lab-team-preview,
+.lab-cta {
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid currentColor;
+}
+
 /* Footer */
 
 .site-footer {
@@ -597,6 +741,38 @@ a:hover {
 
   .contact-page .contact-image {
     max-width: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .lab-highlights,
+  .applications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .equipment-feature,
+  .equipment-feature-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-feature-reverse .equipment-text,
+  .equipment-feature-reverse .equipment-image {
+    order: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .lab-highlights,
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-hero .lead {
+    font-size: 1.1rem;
+  }
+
+  .workflow-list span {
+    width: 100%;
   }
 }
 
