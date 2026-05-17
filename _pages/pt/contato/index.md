@@ -9,12 +9,53 @@ alt_lang: /en/contact/
 <section class="page-shell">
 	<h1>Contato</h1>
 
-	<h2>Fale com o LAM+</h2>
-	<p>O LAM+ recebe demandas relacionadas a analise, imageamento e caracterizacao de amostras sedimentares e materiais associados, com foco em tecnicas de alta resolucao, abordagens nao destrutivas e integracao entre dados espectrais, geoquimicos, fisicos e computacionais. O laboratorio tambem atua no desenvolvimento de solucoes baseadas em inteligencia artificial para apoiar a interpretacao de sequencias sedimentares, identificacao de padroes, integracao de dados multiproxy e construcao de fluxos analiticos mais reprodutiveis.</p>
+	<div class="contact-layout">
+		<div class="contact-text">
+			<h2>Fale com o LAM+</h2>
+			<p>O LAM+ recebe demandas relacionadas à análise, imageamento e caracterização de amostras sedimentares e materiais associados, com foco em técnicas de alta resolução, abordagens não destrutivas e integração entre dados espectrais, geoquímicos, físicos e computacionais. O laboratório também atua no desenvolvimento de soluções baseadas em inteligência artificial para apoiar a interpretação de sequências sedimentares, identificação de padrões, integração de dados multiproxy e construção de fluxos analíticos mais reprodutíveis.</p>
 
-	<p>Entre em contato conosco para discutir o envio ou avaliacao previa de amostras, a capacidade tecnica dos equipamentos disponiveis, possibilidades de analises em testemunhos sedimentares, secoes ou amostras discretas, alem de parcerias cientificas, interinstitucionais ou tecnologicas.</p>
+			<p>Entre em contato conosco para discutir o envio ou avaliação prévia de amostras, a capacidade técnica dos equipamentos disponíveis, possibilidades de análises em testemunhos sedimentares, seções ou amostras discretas, além de parcerias científicas, interinstitucionais ou tecnológicas.</p>
 
-	<p>Cada demanda sera avaliada considerando o tipo de material, o estado de preservacao da amostra, os objetivos cientificos ou tecnicos do estudo, a disponibilidade operacional dos equipamentos e a eventual necessidade de desenvolvimento metodologico especifico.</p>
+			<p>Cada demanda será avaliada considerando o tipo de material, o estado de preservação da amostra, os objetivos científicos ou técnicos do estudo, a disponibilidade operacional dos equipamentos e a eventual necessidade de desenvolvimento metodológico específico.</p>
 
-	<p>O LAM+ atua como uma plataforma multiusuaria voltada a inovacao em geociencias, combinando imageamento hiperespectral, XRF core scanning, radiografia sedimentar, MEV-EDS e inteligencia artificial aplicada a sequencias sedimentares.</p>
+			<p>O LAM+ atua como uma plataforma multiusuária voltada à inovação em geociências, combinando imageamento hiperespectral, XRF core scanning, radiografia sedimentar, MEV-EDS e inteligência artificial aplicada a sequências sedimentares.</p>
+		</div>
+		<div class="contact-image">
+			<img src="{{ site.baseurl }}/assets/img/hero/hero-combo-contact.png" alt="LAM+ contact" />
+		</div>
+	</div>
 </section>
+
+<style>
+.contact-layout {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+}
+.contact-text {
+	flex: 1 1 0;
+	min-width: 0;
+}
+.contact-image {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: flex-start;
+	padding-top: 0.25rem;
+}
+.contact-image img {
+	width: 220px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 6px;
+}
+@media (max-width: 640px) {
+	.contact-layout {
+		flex-direction: column;
+	}
+	.contact-image img {
+		width: 100%;
+		max-width: 320px;
+	}
+}
+</style>
